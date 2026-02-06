@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About | Vishnu</title>
+      <link rel="icon" href="/image copy.png" type="image/png">
+
+
+  <style>
+    /* RESET */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #063f50;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      padding: 20px 40px;
+      background: transparent;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .nav-links a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 16px;
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      background: #ffffff;
+      color: #000;
+    }
+
+    /* ABOUT SECTION */
+    .about-section {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .about-content {
+      flex: 2;
+    }
+
+    .about-header {
+      text-align: center;
+      color: #ffffff;
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
+
+    .about-box {
+      background: #f4f4f4;
+      padding: 40px;
+      border-radius: 18px;
+      line-height: 2;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    .about-box p {
+      margin-bottom: 30px;
+    }
+
+    /* IMAGE */
+    .about-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-image img {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      object-fit: cover;
+      padding: 6px;
+      border: 5px solid rgba(0, 255, 200, 0.7);
+      box-shadow: 0 0 35px rgba(0, 255, 200, 0.45);
+    }
+
+    /* MOBILE */
+    @media (max-width: 700px) {
+      .about-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .about-image img {
+        width: 220px;
+        height: 220px;
+      }
+
+      .nav-links a {
+        margin-left: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Vishnu</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Technical Skills</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="about-section">
+
+    <div class="about-content">
+      <h2 class="about-header">About</h2>
+
+     <div class="about-box">
+    <p>
+        I’m <strong>Vishnu Prabu</strong> from <strong>Karur – Aravakurichi</strong>. 
+        I completed my schooling at <strong>Government High School, HCL</strong>, where I successfully finished my SSLC.
+    </p>
+
+    <p>
+            I pursued my college education at <strong>PGP College</strong> under <strong>Periyar University</strong> and earned my degree. 
+        After graduation, I completed a <strong>Full Stack Development course</strong>, which further strengthened my passion for the <strong>IT field</strong>.
+    </p>
+
+    <p>
+            During my training, I gained hands-on experience in <strong>HTML, CSS, JavaScript, React, Node.js, and database management</strong>, 
+        developing web applications that helped me understand real-world software development.
+    </p>
+
+    <p>
+            I am passionate about technology and constantly exploring new frameworks, modern development practices, 
+        and innovative solutions to solve real-world problems. I am particularly interested in <strong>web development, cloud computing, and emerging technologies</strong> like AI and machine learning.
+    </p>
+
+    <p>
+            I am a proactive learner who thrives in challenging environments, always looking for opportunities to grow professionally 
+        and contribute effectively to the IT industry. My goal is to continuously enhance my skills and be part of projects that make a meaningful impact.
+    </p>
+</div>
+
+        </p>
+      </div>
+    </div>
+
+    <div class="about-image">
+      <img src="./images/IMG-20250213-WA0014 (2).jpg" alt="Vishnu Prabu">
+    </div>
+
+  </section>
+
+</body>
+</html>
