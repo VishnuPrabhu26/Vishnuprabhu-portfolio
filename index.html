@@ -1,269 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VISHNU PRABU ! PORTFOLIO</title>
-    <link rel="icon" href="/image copy.png" type="image/png">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VISHNU PRABU | PORTFOLIO</title>
+<link rel="icon" href="/image copy.png" type="image/png">
 
-  <!-- Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<!-- Remix Icons -->
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      min-height: 100vh;
-      background: linear-gradient(
-        135deg,
-        #071b2a 0%,
-        #0a2a3f 40%,
-        #071b2a 100%
-      );
-      color: #ffffff;
-    }
+<style>
 
-    a {
-      text-decoration: none;
-    }
-
-    /* ================= NAVBAR ================= */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 1.5rem 0;
-      z-index: 1000;
-      background: rgba(7, 27, 42, 0.7);
-      backdrop-filter: blur(8px);
-    }
-
-    .nav-container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 2rem;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #ffffff;
-    }
-
-    .nav-menu li {
-      list-style: none;
-      display: inline-block;
-      margin-left: 1.5rem;
-    }
-
-    .nav-menu li a {
-      color: #ffffff;
-      padding: 8px 18px;
-      border-radius: 20px;
-      transition: 0.3s ease;
-      display: inline-block;
-    }
-
-    .nav-menu li a:hover {
-      background: #ffffff;
-      color: #071b2a;
-    }
-
-    /* ================= HERO ================= */
-    .hero-section {
-      padding-top: 8rem;
-      padding-bottom: 4rem;
-    }
-
-    .hero-content {
-      max-width: 1200px;
-      margin: auto;
-      padding: 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-
-      border-radius: 25px;
-      background: linear-gradient(
-        to right,
-        rgba(7, 27, 42, 0.95),
-        rgba(7, 27, 42, 0.7),
-        rgba(7, 27, 42, 0.4)
-      );
-      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-    }
-
-    .text-area {
-      flex: 1;
-    }
-
-    .subtitle {
-      letter-spacing: 3px;
-      font-weight: 600;
-      color: #00b4ff;
-    }
-
-    .title {
-      font-size: 2.6rem;
-      margin: 0.8rem 0;
-      line-height: 1.3;
-    }
-
-    .title span {
-      color: #00b4ff;
-    }
-
-    .description {
-      margin: 1rem 0 2rem;
-      line-height: 1.7;
-      color: #d7e7f3;
-      max-width: 500px;
-    }
-
-    /* ================= BUTTONS ================= */
-  .btn-group .btn {
-  display: inline-block;
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  margin-right: 1rem;
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
 }
 
-/* PRIMARY BUTTON */
-.btn-primary {
-  background: linear-gradient(135deg, #47c8ff, #28b6f8);
-  color: #ffffff;
+body{
+min-height:100vh;
+background:linear-gradient(135deg,#071b2a 0%,#0a2a3f 40%,#071b2a 100%);
+color:#ffffff;
 }
 
-/* SECONDARY BUTTON */
-.btn-secondary {
-  border: 2px solid #00b4ff;
-  color: #00b4ff;
-  background: transparent;
+/* ================= NAVBAR ================= */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 0;
+background:rgba(7,27,42,0.75);
+backdrop-filter:blur(10px);
+z-index:1000;
 }
 
-/* ===== HOVER EFFECT ===== */
-.btn:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 180, 255, 0.4);
+.nav-container{
+width:90%;
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+
 }
 
-/* ===== CLICK EFFECT ===== */
-.btn:active {
-  transform: scale(0.95);
-  background: linear-gradient(135deg, #00f7ff, #005f87);
-  box-shadow: 0 5px 15px rgba(0, 180, 255, 0.6);
+.logo{
+font-size:1.7rem;
+font-weight:700;
+letter-spacing:1px;
+text-decoration: none;
+color: #cde6f3;
 }
 
+.nav-menu li{
+list-style:none;
+display:inline-block;
+margin-left:25px;
 
-    /* ================= IMAGE ================= */
-/* ===== Profile Fade Animation ===== */
-.hero-image img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  object-fit: cover;
-  padding: 6px;
-  border: 10px solid #00b4ff;
-  filter: drop-shadow(0 0 25px hwb(198 45% 0%));
-  
-  opacity: 0;
-  animation: fadeIn 1.8s ease forwards;
-  animation-delay: 0.5s;
-  transition: transform 0.4s ease;
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 2;
-  }
+.nav-menu li a{
+color:#ffffff;
+padding:8px 20px;
+border-radius:25px;
+transition:0.3s ease;
+text-decoration: none;
 }
 
-/* Floating effect */
-.hero-image {
-  position: relative;
-  animation: float 3s ease-in-out infinite;
+.nav-menu li a:hover{
+background:#ffffff;
+color:#071b2a;
+text-decoration: none;
 }
 
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
+/* ================= HERO ================= */
+.hero-section{
+padding-top:9rem;
+padding-bottom:4rem;
 }
 
-      /* ================= RESPONSIVE ================= */
-    @media (max-width: 900px) {
-      .hero-content {
-        flex-direction: column-reverse;
-        text-align: center;
-      }
+.hero-content{
+max-width:1200px;
+margin:auto;
+padding:3rem;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:3rem;
+border-radius:30px;
+background:linear-gradient(to right,
+rgba(7,27,42,0.95),
+rgba(7,27,42,0.75),
+rgba(7,27,42,0.4));
+box-shadow:0 25px 60px rgba(0,0,0,0.5);
+animation:fadeUp 1.2s ease forwards;
+}
 
-      .description {
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-  </style>
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.text-area{
+flex:1;
+}
+
+.subtitle{
+letter-spacing:4px;
+font-weight:600;
+color:#00b4ff;
+margin-bottom:10px;
+}
+
+.title{
+font-size:3rem;
+font-weight:800;
+line-height:1.3;
+margin-bottom:15px;
+}
+
+.title span{
+color:#00b4ff;
+}
+
+.description{
+color:#cde6f3;
+max-width:520px;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+/* ================= BUTTONS ================= */
+.btn{
+display:inline-block;
+padding:14px 30px;
+border-radius:35px;
+font-weight:600;
+margin-right:15px;
+transition:0.4s ease;
+
+}
+
+.btn-primary{
+background:linear-gradient(135deg,#00b4ff,#0084ff);
+color:#ffffff;
+text-decoration: none;
+}
+
+.btn-secondary{
+border:2px solid #00b4ff;
+color:#00b4ff;
+text-decoration: none;
+}
+
+.btn:hover{
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 15px 35px rgba(0,180,255,0.4);
+}
+
+/* ================= PROFILE IMAGE ================= */
+.hero-image img{
+width:330px;
+height:330px;
+border-radius:50%;
+object-fit:cover;
+padding:6px;
+border:8px solid #00b4ff;
+box-shadow:0 0 40px rgba(0,180,255,0.6);
+animation:float 4s ease-in-out infinite;
+transition:0.4s ease;
+}
+
+.hero-image img:hover{
+transform:scale(1.05);
+box-shadow:0 0 60px rgba(0,180,255,1);
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-18px);}
+100%{transform:translateY(0);}
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+.hero-content{
+flex-direction:column-reverse;
+text-align:center;
+}
+.description{
+margin:auto;
+}
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#" class="logo">Vishnu Prabu 💗🦢</a>
-      <ul class="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="skills.html" >Technical Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+<nav class="navbar">
+<div class="nav-container">
+<a href="#" class="logo">Vishnu Prabu 🦢</a>
+<ul class="nav-menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="skills.html">Technical Skills</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+</nav>
 
-  <!-- HERO -->
-  <section class="hero-section">
-    <div class="hero-content">
+<section class="hero-section">
+<div class="hero-content">
 
-      <div class="text-area">
-        <p class="subtitle">HELLO</p>
-        <h1 class="title">
-          I'm <span>Vishnu Prabu</span><br>
-          Full Stack Java Developer
-        </h1>
+<div class="text-area">
+<p class="subtitle">HELLO</p>
 
-        <p class="description">
-          I'm a Full Stack Java Developer (Fresher), trained in building
-          responsive web applications using HTML, CSS, JavaScript and Java.
-        </p>
+<h1 class="title">
+I'm <span>Vishnu Prabu</span><br>
+Full Stack Java Developer
+</h1>
 
-        <div class="btn-group">
-          <a href="Demo4.html" class="btn btn-primary">Projects</a>
-          <a href="./rsm.pdf" download class="btn btn-secondary">Download CV</a>
-        </div>
-      </div>
+<p class="description">
+Full Stack Java Developer (Fresher) skilled in building responsive
+and scalable web applications using HTML, CSS, JavaScript, React,
+Java, and Spring Boot.
+</p>
 
-      <div class="hero-image">
-        <img src="./images/20260125_143002.jpg" alt="Profile Photo">
-      </div>
+<a href="Demo4.html" class="btn btn-primary">View Projects</a>
+<a href="./VISHNU PRABU V.docx" download class="btn btn-secondary">Download CV</a>
 
-    </div>
-  </section>
+</div>
+
+<div class="hero-image">
+<img src="./images/20260125_143002.jpg" alt="Profile Photo">
+</div>
+
+</div>
+</section>
 
 </body>
 </html>

@@ -1,145 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Skills | Vishnu</title>
-      <link rel="icon" href="/image copy.png" type="image/png">
+<meta charset="UTF-8">
+<title>Skills | Vishnu</title>
+<link rel="icon" href="/image copy.png" type="image/png">
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  height: 100vh;   /* ✅ lock body to viewport height */
-  background: linear-gradient(135deg, 
-#000000,    #064420);
-  
-  background-size: cover;
-  background-attachment: fixed;
-  color: white;
-  overflow: hidden;   /* ✅ prevent scrolling */
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+}
+
+body{
+height:100vh;
+background:linear-gradient(135deg,#001f1c,#014d4e,#02735e,#038c73);
+display:flex;
+flex-direction:column;
+color:white;
+overflow:hidden;
 }
 
 /* ===== NAVBAR ===== */
-.navbar {
-  width: 100%;
-  height: 80px;
-  padding: 20 50px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  background: transparent;
+.navbar{
+padding:20px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
+
+.logo{
+font-size:22px;
+font-weight:600;
 }
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+
+.nav-links a{
+text-decoration:none;
+color:white;
+margin-left:25px;
+padding:8px 18px;
+border-radius:25px;
+transition:0.3s;
 }
-.nav-links a {
-  padding: 8px 18px;
-  text-decoration: none;
-  color: #ffffff;
-  border-radius: 20px;
-  transition: 0.3s ease;
-}
-.nav-links a:hover {
-  background: #ffffff;
-  color: #000;
+
+.nav-links a:hover{
+background:white;
+color:#014d4e;
 }
 
 /* ===== PAGE CONTENT ===== */
-.page-content {
-  height: 100vh;   /* ✅ full screen */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.page-content{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
-.skills-box {
-  width: 80%;
-  max-width: 600px;
-  background: rgba(255, 255, 255, 0.08);
-  padding: 30px;
-  border-radius: 30px;
-  box-shadow: 0 20px 50px rgba(255, 255, 255, 0.185);
-  text-align: center;
-  animation: fadeIn 1.5s ease-in-out;
+/* ===== SKILLS BOX ===== */
+.skills-box{
+width:800px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(20px);
+padding:50px;
+border-radius:35px;
+text-align:center;
+box-shadow:0 0 60px rgba(0,255,170,0.25);
+animation:fadeIn 1.2s ease forwards;
 }
 
-.skills-title {
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: #0ba8c4;
-}
-.skills-list {
-  list-style: none;
-  padding: 0;
-  display: flex;              /* ✅ flex layout */
-  flex-wrap: wrap;            /* ✅ wrap items to next line */
-  justify-content: center;    /* ✅ center them */
-  gap: 20px;                  /* ✅ spacing between circles */
-}
-
-.skills-list li {
-  margin-bottom: 20px;
-  padding: 12px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.1);
-  transition: transform 0.3s ease, background 0.3s ease;
+/* ===== BIG PROFILE IMAGE ===== */
+.profile-img{
+width:200px;        /* 🔥 Bigger image */
+height:200px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:30px;
+border:6px solid rgba(0,255,170,0.8);
+box-shadow:0 0 40px rgba(0,255,170,0.8);
+animation:float 4s ease-in-out infinite;
+transition:0.4s ease;
 }
 
-.skills-list li:hover {
-  background: #2cc1db;
-  color: #021421;
-  transform: scale(1.05);
+.profile-img:hover{
+transform:scale(1.08);
+box-shadow:0 0 60px rgba(0,255,170,1);
 }
 
-/* ===== ANIMATIONS ===== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Floating Animation */
+@keyframes float{
+0%{ transform:translateY(0px);}
+50%{ transform:translateY(-15px);}
+100%{ transform:translateY(0px);}
 }
 
-    
-  </style>
+/* Fade Animation */
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.skills-title{
+font-size:36px;
+margin-bottom:35px;
+color:#00ffcc;
+letter-spacing:1px;
+}
+
+/* ===== SKILLS LIST ===== */
+.skills-list{
+list-style:none;
+padding:0;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.skills-list li{
+background:rgba(255,255,255,0.12);
+padding:16px 22px;
+border-radius:25px;
+transition:0.3s ease;
+cursor:pointer;
+font-size:15px;
+}
+
+.skills-list li:hover{
+background:#00ffcc;
+color:#002f2f;
+transform:scale(1.1);
+box-shadow:0 0 25px rgba(0,255,170,0.9);
+}
+
+</style>
 </head>
 
 <body>
 
+<nav class="navbar">
+<div class="logo">Vishnu Prabu 🦢</div>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="skills.html">Technical Skills</a>
+<a href="contact.html">Contact</a>
+</div>
+</nav>
 
-  <nav class="navbar">
-    <div class="logo">Vishnu Prabu 🦢</div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="skills.html">Technical Skills</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
+<div class="page-content">
+<div class="skills-box">
 
-  <!-- ===== CONTENT ===== -->
-  <div class="page-content">
-    <div class="skills-box">
-      <h2 class="skills-title">Technical Skills</h2>
+<img src="images/IMG_3960 (1).jpg" class="profile-img" alt="Vishnu">
 
-      <ul class="skills-list">
-        <li><strong>Languages:</strong> Java , JavaScript, Python (Basics)</li>
-        <li><strong>Frontend:</strong> HTML5, CSS3, React</li>
-        <li><strong>Backend:</strong> Java (Spring Boot)</li>
-        <li><strong>Database:</strong> MySQL,MongoDB</li>
-        <li><strong>Tools:</strong> Git, GitHub, VS Code, IntelliJ IDEA, Canva, Photoshop</li>
-      </ul>
-    </div>
-  </div>
+<h2 class="skills-title">Technical Skills</h2>
+
+<ul class="skills-list">
+<li><strong>Languages:</strong> Java, JavaScript, Python</li>
+<li><strong>Frontend:</strong> HTML5, CSS3, React</li>
+<li><strong>Backend:</strong> Spring Boot</li>
+<li><strong>Database:</strong> MySQL, MongoDB</li>
+<li><strong>Tools:</strong> Git, GitHub, VS Code, IntelliJ, Canva</li>
+</ul>
+
+</div>
+</div>
 
 </body>
 </html>

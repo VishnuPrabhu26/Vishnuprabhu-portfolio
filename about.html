@@ -3,23 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>About | Vishnu</title>
-      <link rel="icon" href="/image copy.png" type="image/png">
+  <link rel="icon" href="/image copy.png" type="image/png">
 
+  <!-- Professional Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* RESET */
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #063f50;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg,#063f50,#021f28);
       height: 100vh;
-      overflow: auto;
+      overflow: hidden; /* no scroll */
+      display:flex;
+      flex-direction:column;
     }
 
     /* NAVBAR */
     .navbar {
-      padding: 20px 40px;
-      background: transparent;
+      padding: 20px 60px;
     }
 
     .nav-container {
@@ -30,7 +37,7 @@
 
     .logo {
       font-size: 22px;
-      font-weight: bold;
+      font-weight: 600;
       color: #ffffff;
     }
 
@@ -38,91 +45,113 @@
       margin-left: 30px;
       text-decoration: none;
       color: #ffffff;
-      font-size: 16px;
-      padding: 0.5rem 1.2rem;
-      border-radius: 20px;
-      transition: 0.3s;
+      font-size: 15px;
+      padding: 8px 18px;
+      border-radius: 25px;
+      transition: 0.3s ease;
     }
 
     .nav-links a:hover {
-      background: #ffffff;
+      background: #00ffc8;
       color: #000;
     }
-.about-section {
-  max-width: 1100px;
-  margin: 10px auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;   /* 👈 change this */
-  gap: 30px;                 /* 👈 little spacing between box & image */
-}
 
-
-    .about-content {
-      flex: 0 0 750px;
+    /* MAIN SECTION */
+    .about-section {
+      flex:1;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:60px;
+      padding:20px 80px;
     }
 
-   .about-header {
-  text-align: center;
-  color: #ffffff;
-  font-size: 30px;
-  margin-bottom: 10px;  /* 👈 reduce space */
-}
-
-    .about-box {
-      background: #f4f4f4;
-      padding: 10px;
-      border-radius: 18px;
-      line-height: 1.5;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    .about-content{
+      max-width:750px;
     }
 
-    .about-box p {
-      margin-bottom: 20px;
-        text-indent: 90px;
+    .about-header{
+      text-align:center;
+      color:white;
+      font-size:36px;
+      margin-bottom:25px;
+      letter-spacing:1px;
     }
 
-.about-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  margin-top: 70px;  
-}
-
-    .about-image img {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      object-fit: cover;
-      padding: 6px;
-      border: 5px solid rgba(0, 255, 200, 0.7);
-      box-shadow: 0 0 35px rgba(0, 255, 200, 0.45);
+    .about-box{
+      background:white;
+      padding:35px 40px;
+      border-radius:20px;
+      line-height:1.6;
+      font-size:15px;
+      color:#333;
+      box-shadow:0 20px 40px rgba(0,0,0,0.25);
+      animation:fadeUp 1s ease forwards;
     }
 
-    /* MOBILE */
-    @media (max-width: 1200px) {
-      .about-section {
-        flex-direction: column-reverse;
-        text-align: center;
-        margin-top: 70px;
+    .about-box p{
+      margin-bottom:15px;
+      text-indent:50px;
+    }
+
+    /* IMAGE SECTION */
+    .about-image img{
+      width:260px;
+      height:260px;
+      border-radius:50%;
+      object-fit:cover;
+      border:6px solid #00ffc8;
+
+      /* Glow */
+      box-shadow:
+        0 0 20px #00ffc8,
+        0 0 40px #00ffc8,
+        0 0 60px rgba(0,255,200,0.6);
+
+      animation:slideRight 1.2s ease forwards,
+                 glowPulse 2s infinite alternate;
+    }
+
+    /* Animations */
+    @keyframes slideRight{
+      from{
+        opacity:0;
+        transform:translateX(80px);
       }
-
-      .about-image img {
-        width: 220px;
-        height: 220px;
-      }
-
-      .nav-links a {
-        margin-left: 25px;
+      to{
+        opacity:1;
+        transform:translateX(0);
       }
     }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @keyframes glowPulse{
+      from{
+        box-shadow:
+          0 0 20px #00ffc8,
+          0 0 40px #00ffc8;
+      }
+      to{
+        box-shadow:
+          0 0 30px #00ffc8,
+          0 0 60px #00ffc8;
+      }
+    }
+
   </style>
 </head>
 
 <body>
-
 
   <nav class="navbar">
     <div class="nav-container">
@@ -141,33 +170,31 @@
     <div class="about-content">
       <h2 class="about-header">About</h2>
 
-     <div class="about-box">
-    <p>
-                  I’m <strong>Vishnu Prabu</strong> from <strong>Karur – Aravakurichi</strong>. 
-        I completed my schooling at <strong>Government High School, HCL</strong>, where I successfully finished my SSLC.
-    </p>
+      <div class="about-box">
+        <p>
+          I’m <strong>Vishnu Prabu</strong> from <strong>Karur – Aravakurichi</strong>. 
+          I completed my schooling at <strong>Government High School, HCL</strong>.
+        </p>
 
-    <p>
-                   I pursued my college education at <strong>PGP College</strong> under <strong>Periyar University</strong> and earned my degree. 
-        After graduation, I completed a <strong>Full Stack Development course</strong>, which further strengthened my passion for the <strong>IT field</strong>.
-    </p>
+        <p>
+          I pursued my college education at <strong>PGP College</strong> under 
+          <strong>Periyar University</strong> and earned my degree. After graduation, 
+          I completed a <strong>Full Stack Development course</strong>.
+        </p>
 
-    <p>
-                    During my training, I gained hands-on experience in <strong>HTML, CSS, JavaScript, React, Node.js, and database management</strong>, 
-        developing web applications that helped me understand real-world software development.
-    </p>
+        <p>
+          During my training, I gained hands-on experience in 
+          <strong>HTML, CSS, JavaScript, React, Node.js, and databases</strong>.
+        </p>
 
-    <p>
-                      I am passionate about technology and constantly exploring new frameworks, modern development practices, 
-        and innovative solutions to solve real-world problems. I am particularly interested in <strong>web development, cloud computing, and emerging technologies</strong> like AI and machine learning.
-    </p>
+        <p>
+          I am passionate about web development, cloud computing, and 
+          emerging technologies like AI and Machine Learning.
+        </p>
 
-    <p>
-                     I am a proactive learner who thrives in challenging environments, always looking for opportunities to grow professionally 
-        and contribute effectively to the IT industry. My goal is to continuously enhance my skills and be part of projects that make a meaningful impact.
-    </p>
-</div>
-
+        <p>
+          My goal is to continuously enhance my skills and contribute 
+          effectively to meaningful IT projects.
         </p>
       </div>
     </div>
